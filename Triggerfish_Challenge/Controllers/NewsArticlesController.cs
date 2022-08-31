@@ -18,7 +18,14 @@ namespace Triggerfish_Challenge.Controllers
 
         public IActionResult Index()
         {
-            return View(_articleService.GetNewsArticles());
+            var articlesResponse = _articleService.GetNewsArticles();
+
+            if (articlesResponse.IsSuccessful)
+            {
+                return View(articlesResponse.ReturnData);
+            }
+
+            return View();
         }
     }
 }

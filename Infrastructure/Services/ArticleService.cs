@@ -1,4 +1,5 @@
-﻿using Domain.Model;
+﻿using Domain;
+using Domain.Model;
 using Infrastructure.Interfaces.Repositories;
 using Infrastructure.Interfaces.Services;
 using System;
@@ -18,9 +19,9 @@ namespace Infrastructure.Services
             _articleRepository = articleRepository ?? throw new ArgumentNullException($"{articleRepository} must not be null when initialising ArticleService");
         }
 
-        public List<Article> GetNewsArticles()
+        public ServiceResponse<List<Article>> GetNewsArticles()
         {
-            return _articleRepository.GenerateNewsArticles();
+            return _articleRepository.RetrieveNewsArticlesFromApi();
         }
     }
 }

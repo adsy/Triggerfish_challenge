@@ -1,8 +1,10 @@
-﻿using Domain.Model;
+﻿using Domain;
+using Domain.Model;
 using Infrastructure.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +12,23 @@ namespace Infrastructure.Repositories
 {
     public class ArticleRepository : IArticleRepository
     {
-        public List<Article> GenerateNewsArticles()
+        public ArticleRepository()
+        {
+
+        }
+
+        public ServiceResponse<List<Article>> RetrieveNewsArticlesFromApi()
+        {
+            // Do api call here if it was real..
+
+            return new ServiceResponse<List<Article>>
+            {
+                StatusCode = (int)HttpStatusCode.OK,
+                ReturnData = GenerateNewsArticles()
+            };
+        }
+
+        private List<Article> GenerateNewsArticles()
         {
             return new List<Article>
             {

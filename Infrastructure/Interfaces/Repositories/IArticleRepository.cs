@@ -1,4 +1,5 @@
-﻿using Domain.Model;
+﻿using Domain;
+using Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Infrastructure.Interfaces.Repositories
 {
     public interface IArticleRepository
     {
-        List<Article> GenerateNewsArticles();
+        ServiceResponse<List<Article>> RetrieveNewsArticlesFromApi();
     }
 }

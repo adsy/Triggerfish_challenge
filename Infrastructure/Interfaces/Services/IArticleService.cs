@@ -1,4 +1,5 @@
-﻿using Domain.Model;
+﻿using Domain;
+using Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Infrastructure.Interfaces.Services
 {
     public interface IArticleService
     {
-        List<Article> GetNewsArticles();
+        ServiceResponse<List<Article>> GetNewsArticles();
     }
 }
