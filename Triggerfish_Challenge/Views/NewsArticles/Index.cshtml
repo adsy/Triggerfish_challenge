@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Domain.Model.Article> 
+@{
+}
+<div class="d-flex flex-row flex-wrap justify-content-between news-articles-container">
+    @foreach (var article in Model)
+    {
+        <div class="col-sm-12 col-md-4 card-container mb-2">
+            <img class="card-img-top" src="@article.ImageLink" alt="Card image cap">
+            <div class="">
+                <p class="article-minute-text mt-1 mb-0">@article.ReadTime</p>
+                <p class="article-card-title mt-1">@article.ArticleTitle</p>
+                <p class="article-card-text mt-2">@article.Description</p>
+                <span class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                    </svg><a href="#" class="ml-3 font-weight-bold insights-link">READ OUR INSIGHTS</a>
+                </span>
+            </div>
+        </div>
+    }
+</div>

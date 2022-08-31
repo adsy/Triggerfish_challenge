@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dpO8qFUZoGl1eoLejL3v92kFnC5HTBAxspGtavAnDlXM3JGEYbgkefOKeLPUd+UMYXajr8bUwaZZUgfwZQLXVw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\adsyb\\Documents\\CODING\\Triggerfish_Challenge\\Triggerfish_Challenge\\Triggerfish_Challenge.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\adsyb\\.nuget\\packages\\bootstrap\\5.2.0\\bootstrap.5.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
